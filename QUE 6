@@ -1,0 +1,25 @@
+//Count Vowels
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int countVowels(const char *sentence) {
+    int count = 0;
+    for (int i = 0; sentence[i] != '\0'; i++) {
+        char ch = tolower(sentence[i]);
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+            count++;
+    }
+    return count;
+}
+
+int main() {
+    char sentence[100];
+    printf("Enter a sentence: ");
+    fgets(sentence, sizeof(sentence), stdin);
+
+    int vowels = countVowels(sentence);
+    printf("Number of vowels in the sentence: %d\n", vowels);
+
+    return 0;
+}
