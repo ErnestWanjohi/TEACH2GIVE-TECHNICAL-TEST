@@ -1,0 +1,19 @@
+//Question 2: Fibonacci Sequence
+#include <stdio.h>
+
+int main() {
+    int n1 = 0, n2 = 1, nextNum = 0;
+
+    printf("Fibonacci Series up to 100:\n");
+    printf("%d, %d, ", n1, n2);
+    nextNum = n1 + n2;
+
+    while (nextNum <= 100) {
+        printf("%d, ", nextNum);
+        n1 = n2;
+        n2 = nextNum;
+        nextNum = n1 + n2;
+    }
+
+    return 0;
+}
