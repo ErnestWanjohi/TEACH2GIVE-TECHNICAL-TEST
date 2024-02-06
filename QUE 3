@@ -1,0 +1,16 @@
+//Power of Two
+#include <stdio.h>
+int main()
+{
+	int num;
+	printf("Enter integer\n");
+	scanf("%d",&num);
+	if (num%2==0){
+		printf("true");
+	}
+	else{
+		printf("false");
+	}
+	
+	return 0;
+}
