@@ -1,0 +1,32 @@
+//Capitalize Words
+#include <stdio.h>
+#include <ctype.h>
+
+void capitalizeFirstLetter(char str[]) {
+    int i = 0;
+    
+    // Capitalize the first letter of the string
+    if (str[i] >= 'a' && str[i] <= 'z')
+        str[i] = toupper(str[i]);
+    
+    // Traverse the string
+    while (str[i] != '\0') {
+        // If current character is space, capitalize the next character
+        if (str[i] == ' ' && str[i + 1] != '\0' && (str[i + 1] >= 'a' && str[i + 1] <= 'z'))
+            str[i + 1] = toupper(str[i + 1]);
+        i++;
+    }
+}
+
+int main() {
+    char str[100];
+    
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    
+    capitalizeFirstLetter(str);
+    
+    printf("Result: %s\n", str);
+    
+    return 0;
+}
